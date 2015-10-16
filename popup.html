@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+            width: 280px;
+        }
+
+        #title {
+            padding: 0 50px;
+            font-size: 25px;
+            color: #FFF;
+            line-height: 50px;
+            background-color: #00897B;
+        }
+
+        #content {
+            padding: 10px 25px;
+        }
+
+        #message {
+            margin-bottom: 10px;
+            line-height: 15px;
+        }
+
+        .input-auto input[type=radio] {
+            display: none;
+        }
+
+        .input-auto div {
+            display: inline-block;
+        }
+
+        .input-auto label {
+            cursor: pointer;
+            width: 80px;
+            height: 35px;
+            color: #FFF;
+            text-align: center;
+            line-height: 35px;
+            background-color: #DDD;
+        }
+
+        .input-auto > div:first-of-type > label.selected {
+            background-color: #A33 !important;
+        }
+        .input-auto > div:last-of-type > label.selected {
+            background-color: #0A8 !important;
+        }
+
+        #disclaimer {
+            margin-top: 5px;
+            margin-bottom: 20px;
+            line-height: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="title">AutoRMC</div>
+    <div id="content">
+        <div id="disclaimer">
+            Disclaimer: <br /><br />
+            Please be noted that this plugin is UNOFFICIAL. All user data are stored on this computer so NEVER use it on public computer. <br /><br />
+            The author is not responsible for any consequences caused by this plugin. Use it at your own risk.
+        </div>
+        <div id="message"></div>
+        <form>
+            <div id="autofill" class="form-group">
+                <label class="control-label">Auto Fill</label>
+                <div id="input-autofill" class="input-auto">
+                    <div>
+                        <input id="disable-autofill" type="radio" name="autofill" value="disable" />
+                        <label id="disable-autofill-label" for="disable-autofill">Disable</label>
+                    </div>
+                    <div>
+                        <input id="enable-autofill" type="radio" name="autofill" value="enable" />
+                        <label id="enable-autofill-label" for="enable-autofill">Enable</label>
+                    </div>
+                </div>
+            </div>
+            <div id="autologin" class="form-group">
+                <label class="control-label">Auto Login</label>
+                <div id="input-autologin" class="input-auto">
+                    <div>
+                        <input id="disable-autologin" type="radio" name="autologin" value="disable" />
+                        <label id="disable-autologin-label" for="disable-autologin">Disable</label>
+                    </div>
+                    <div>
+                        <input id="enable-autologin" type="radio" name="autologin" value="enable" />
+                        <label id="enable-autologin-label" for="enable-autologin">Enable</label>
+                    </div>
+                </div>
+            </div>
+            <div id="username" class="form-group has-feedback">
+                <label for="input-username">User Name</label>
+                <input type="text" id="input-username" class="form-control" placeholder="User Name" />
+                <span class="glyphicon glyphicon-warning-sign form-control-feedback text-danger" aria-hidden="true"></span>
+                <div class="text-danger"></div>
+            </div>
+            <div id="password" class="form-group has-feedback">
+                <label for="input-password">Password</label>
+                <input type="password" id="input-password" class="form-control" placeholder="Password" />
+                <span class="glyphicon glyphicon-warning-sign form-control-feedback text-danger" aria-hidden="true"></span>
+                <div class="text-danger"></div>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="popup.js"></script>
+</body>
+
+</html>

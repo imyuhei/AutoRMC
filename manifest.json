@@ -1,0 +1,40 @@
+{
+	"manifest_version": 2,
+
+	"name": "AutoRMC (Unofficial)",
+
+	"version": "1.0.2",
+
+	"author": "Yu Hei", 
+
+  	"default_locale": "en",
+
+	"description": "Automatcially login to the RMC Wired Internet Service (Unofficial)",
+
+	"browser_action": {
+		"default_icon": "icons/icon48.png",
+		"default_popup": "popup.html"
+	},
+
+	"icons": {
+		"256": "icons/icon256.png", 
+		"128": "icons/icon128.png", 
+		"48": "icons/icon48.png", 
+		"16": "icons/icon16.png"
+	},
+
+	"content_scripts": [
+	  {
+		"matches": ["https://10.0.0.1/*"],
+		"js": ["jQuery-2.1.4.min.js", "content.js"],
+		"run_at": "document_end"
+	  }
+	],
+
+	"permissions": [
+		"https://10.0.0.1/*", 
+		"storage", 
+		"activeTab", 
+		"tabs"
+	]
+}
