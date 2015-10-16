@@ -7,8 +7,6 @@
 
 	"author": "Yu Hei", 
 
-  	"default_locale": "en",
-
 	"description": "Automatcially login to the RMC Wired Internet Service (Unofficial)",
 
 	"browser_action": {
